@@ -3,7 +3,18 @@ import { StyleSheet, Button } from "react-native";
 import React from "react";
 
 export default function Btn(props) {
-  return <Button title={props.title} color="#FF8989" style={styles.btn} />;
+  const onPress = () => {
+    props.onPress();
+  };
+
+  return (
+    <Button
+      title={props.title}
+      onPress={onPress}
+      color="#FF8989"
+      style={styles.btn}
+    />
+  );
 }
 
 const styles = StyleSheet.create({
