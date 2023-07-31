@@ -1,9 +1,11 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import { useEffect, useState } from "react";
+import Signup from "./pages/Signup";
 
 import React from "react";
 import axios from "axios";
+import TextInputComponent from "./components/TextInputComponent";
 
 export default function App() {
   const [message, setMessage] = useState("");
@@ -21,12 +23,15 @@ export default function App() {
       });
   }, []);
 
+  // const [emailtext, setEmailtext] = useState("");
+  // const [idtext, setIdtext] = useState("");
+  // const [passwordtext, setPasswordtext] = useState("");
   return (
     <View style={styles.container}>
       <Text>expo 잘 되는지 실험</Text>
       <Text>{message}</Text>
       <StatusBar style="auto" />
-    </View>
+   </View>
   );
 }
 
