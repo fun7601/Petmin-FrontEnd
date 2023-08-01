@@ -15,7 +15,7 @@ export default function App() {
       method: "get",
     })
       .then((res) => {
-        console.log("axios 성공 ");
+        console.log("axios 성공");
         setMessage(res.data);
       })
       .catch((err) => {
